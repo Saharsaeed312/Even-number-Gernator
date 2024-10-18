@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Html Work -->
+    <div class="container">
+    <h1>Even Number Genrator</h1>
+   <input type="number" id="inputvalue" placeholder="Enter number">
+   <button onclick="generateEven()" id="generateEven">Genetare Even Number</button>
+   <div id="result"></div>
+</div>
+
+<!-- Java Script -->
+   <script>
+    function generateEven(){
+  let inputValue = document.getElementById('inputvalue').value;
+  let i = 0;
+  let value = '';
+  while (i <= inputValue) {
+      if(i % 2 === 0){
+          value += `${i} `;
+      }
+      i++;
+      console.log(value);
+  }
+  document.getElementById('result').innerHTML = value;
+}
+   </script>
+</body>
+</html>
